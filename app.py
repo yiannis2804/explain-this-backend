@@ -33,3 +33,7 @@ def explain():
 # ✅ This makes the server run when you run the file directly
 if __name__ == '__main__':
     app.run(debug=True)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000, debug=True)
+

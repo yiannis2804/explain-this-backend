@@ -6,7 +6,8 @@ app = Flask(__name__)
 CORS(app)  # This allows your extension to access the API
 
 # ✅ Replace this with your real API key
-openai.api_key = "sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 @app.route('/explain', methods=['POST'])
 def explain():
